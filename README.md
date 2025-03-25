@@ -90,14 +90,6 @@ Este repositório contém testes automatizados end-to-end para validar os princi
         npx cypress run --spec "cypress/e2e/diretorio/*"
         ```
 
-## Relatórios de Teste
-
--   O Cypress gera relatórios de teste no formato JSON.
--   Você pode usar plugins como `cypress-mochawesome-reporter` para gerar relatórios HTML mais detalhados.
-
-## Contribuição
-
-Contribuições são bem-vindas! Consulte o arquivo `CONTRIBUTING.md` para obter informações sobre como contribuir para este projeto.
 
 ## Licença
 
