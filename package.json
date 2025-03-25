@@ -1,0 +1,21 @@
+{
+  "name": "rc-cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@faker-js/faker": "^9.6.0",
+    "@types/node": "^22.13.13",
+    "cypress": "^14.2.0",
+    "cypress-file-upload": "^5.0.8",
+    "faker": "^6.6.6",
+    "typescript": "^5.8.2"
+  }
+}
