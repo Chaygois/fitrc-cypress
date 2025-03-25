@@ -1,37 +1,58 @@
-# Projeto de Testes E2E com Cypress
+# Testes Automatizados Cypress para RCFITNESS
 
-Este repositório contém testes automatizados para validar os fluxos de usuário em uma aplicação web RCFITNESS utilizando o Cypress. O foco principal está em testar o cadastro de usuários, login, criação de receitas, visualização e exclusão, além de validações de campos vazios.
+Este repositório contém testes automatizados end-to-end para validar os principais fluxos de usuário na aplicação web RCFITNESS. Os testes foram desenvolvidos utilizando o Cypress e abrangem funcionalidades como cadastro de usuários, login, criação, visualização e exclusão de receitas, além de validações de campos obrigatórios.
+
+## Funcionalidades Testadas
+
+* **Cadastro de Usuário:** Verifica o fluxo de cadastro, incluindo validações de campos obrigatórios.
+* **Login de Usuário:** Testa o login com credenciais válidas e inválidas.
+* **Criação de Receitas:** Valida a criação de novas receitas, incluindo o upload de imagens.
+* **Visualização de Receitas:** Verifica a exibição correta das receitas criadas.
+* **Exclusão de Receitas:** Testa a exclusão de receitas existentes.
+* **Validação de Campos Vazios:** Garante que a aplicação lida corretamente com campos obrigatórios não preenchidos.
 
 ## Tecnologias Utilizadas
 
-- **Cypress**: Framework de testes end-to-end.
-- **faker.js**: Biblioteca para geração de dados falsos para testes.
-- **cypress-file-upload**: Para realizar upload de arquivos em testes.
+* **Cypress:** Framework de testes end-to-end para aplicações web modernas.
+* **faker.js:** Biblioteca para geração de dados fictícios para testes, garantindo a independência dos testes.
+* **cypress-file-upload:** Plugin Cypress para simular o upload de arquivos durante os testes.
 
 ## Pré-requisitos
 
-Certifique-se de ter o **Node.js** e o **npm** instalados no seu ambiente de desenvolvimento. Você pode verificar se já possui o Node.js e o npm instalados com os seguintes comandos:
+* **Node.js e npm:** Certifique-se de que o Node.js e o npm estejam instalados no seu ambiente de desenvolvimento.
+    * Verifique a instalação com os comandos: `node -v` e `npm -v`.
+    * Caso não estejam instalados, baixe e instale a versão mais recente do Node.js em [nodejs.org](https://nodejs.org/).
 
-Caso não tenha o Node.js, faça o download e instalação a partir do site oficial.
+## Instalação
 
-Instalação
-Passo 1: Clone o Repositório
-Clone este repositório para a sua máquina local:
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd seu-repositorio
+1.  **Clone o Repositório:**
+    ```bash
+    git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
+    cd seu-repositorio
+    ```
+2.  **Instale as Dependências:**
+    ```bash
+    npm install
+    ```
+    Este comando instala o Cypress, o faker.js, o cypress-file-upload e outras dependências necessárias.
 
+## Execução dos Testes
 
-Passo 2: Instalar as Dependências
-Na raiz do projeto, execute o seguinte comando para instalar todas as dependências do projeto, incluindo o Cypress:
+1.  **Abra a Interface Gráfica do Cypress:**
+    ```bash
+    npx cypress open
+    ```
+    Este comando abre o Cypress Test Runner, onde você pode selecionar e executar os testes interativamente.
+2.  **Execute os Testes no Terminal (Modo Headless):**
+    ```bash
+    npx cypress run
+    ```
+    Este comando executa os testes diretamente no terminal, sem abrir a interface gráfica. Ideal para integração contínua e pipelines de CI/CD.
 
-npm install
-Esse comando irá instalar o Cypress e outras dependências necessárias para rodar os testes.
+## Licença
 
-Passo 3: Executar os Testes
-Após instalar as dependências, você pode executar os testes utilizando o Cypress. Use o comando abaixo para abrir a interface gráfica do Cypress:
+QAC - LTDA
 
-npx cypress open
-Isso abrirá o Cypress e permitirá que você execute os testes diretamente através da interface. Se preferir rodar os testes no terminal, utilize o comando:
+## Autores
 
-
-npx cypress run
+* Chayanny Gois
