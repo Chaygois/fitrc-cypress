@@ -89,12 +89,6 @@ Este repositório contém testes automatizados end-to-end para validar os princi
         ```bash
         npx cypress run --spec "cypress/e2e/diretorio/*"
         ```
-
-
-## Licença
-
-QAC - Chay Gois
-
 ## Autores
 
 Chayanny Gois
