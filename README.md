@@ -27,8 +27,8 @@ Este repositório contém testes automatizados end-to-end para validar os princi
 
 1.  **Clone o Repositório:**
     ```bash
-    git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
-    cd seu-repositorio
+    git clone https://github.com/Chaygois/rc-cypress.git
+    cd rc-cypress
     ```
 2.  **Instale as Dependências:**
     ```bash
@@ -51,7 +51,7 @@ Este repositório contém testes automatizados end-to-end para validar os princi
 
 ## Licença
 
-QAC - LTDA
+QAC - Chay Gois
 
 ## Autores
 
