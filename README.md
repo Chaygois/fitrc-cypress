@@ -1,4 +1,4 @@
-# Testes Automatizados Cypress para RCFIT
+# Testes Automatizados Cypress para FITRC
 
 Este repositório contém testes automatizados end-to-end para validar os principais fluxos de usuário na aplicação web RCFITNESS. Os testes foram desenvolvidos utilizando o Cypress e abrangem funcionalidades como cadastro de usuários, login, criação, visualização e exclusão de receitas, além de validações de campos obrigatórios.
 
