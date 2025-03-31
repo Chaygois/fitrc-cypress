@@ -9,6 +9,7 @@ describe('Cadastro, login, criação de receita, upload de imagem, visualizaçã
 
     cy.visit('https://rfitness-front-2ygs.vercel.app/');
 
+    
     // Cadastro
     cy.contains('Sign-Up').click();
     cy.get('#name').type(nome);
@@ -44,6 +45,9 @@ describe('Cadastro, login, criação de receita, upload de imagem, visualizaçã
     cy.get('input[id="carboidratos"]').type('60g');
     cy.get('input[id="gorduras"]').type('15g');
 
+
+
+
     // Upload da imagem: verifique se o caminho está correto e o arquivo existe na pasta cypress/fixtures/images
     cy.get('input[id="imagem"]').attachFile('bolo.png');       
     // Submeter o formulário de criar receita
@@ -66,6 +70,10 @@ describe('Cadastro, login, criação de receita, upload de imagem, visualizaçã
     // 9. Voltar para o dashboard
     cy.get('.voltar-btn').click(); // Voltar para a página inicial (Dashboard)
 
+
+
+
+    
     // 10. Fazer logout
     cy.contains('Sair').click(); // Clicar no botão de "Sair" para finalizar a sessão
 
