@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Testes Automatizados Cypress para FITRC
 Este repositório contém testes automatizados end-to-end para validar os principais fluxos de usuário na aplicação web RCFITNESS. Os testes foram desenvolvidos utilizando Cypress e abrangem funcionalidades como cadastro de usuários, login, criação, visualização e exclusão de receitas.
 
@@ -24,10 +25,49 @@ Cypress: Framework de testes end-to-end para aplicações web modernas.
 faker.js: Biblioteca para geração de dados fictícios para testes, garantindo a independência dos testes.
 cypress-file-upload: Plugin para simular o upload de arquivos durante os testes.
 ⚙️ Pré-requisitos
+=======
+# Testes Automatizados Cypress para FITRC
+
+Este repositório contém testes automatizados end-to-end para validar os principais fluxos de usuário na aplicação web RCFITNESS. Os testes foram desenvolvidos utilizando Cypress e abrangem funcionalidades como cadastro de usuários, login, criação, visualização e exclusão de receitas.
+
+##  Funcionalidades Testadas
+
+* **Cadastro de Usuário**
+    * ✅ Verifica o fluxo de cadastro com dados válidos e inválidos.
+    * ✅ Valida mensagens de erro para campos obrigatórios não preenchidos.
+    * ✅ Testa o cadastro com e-mail já registrado.
+* **Login de Usuário**
+    * ✅ Testa o login com credenciais válidas e inválidas.
+    * ✅ Verifica mensagens de erro para credenciais inválidas.
+* **Criação de Receitas**
+    * ✅ Valida a criação de novas receitas com e sem upload de imagens.
+    * ✅ Verifica mensagens de erro para campos obrigatórios não preenchidos.
+    * ✅ Testa a criação de receitas com diferentes tipos de dados.
+* **Visualização de Receitas**
+    * ✅ Verifica a exibição correta das receitas criadas.
+    * ✅ Testa a navegação entre as páginas de receitas.
+* **Exclusão de Receitas**
+    * ✅ Testa a exclusão de receitas existentes.
+    * ✅ Verifica se a receita é removida da lista após a exclusão.
+
+
+##  Tecnologias Utilizadas
+
+* **Cypress:** Framework de testes end-to-end para aplicações web modernas.
+* **faker.js:** Biblioteca para geração de dados fictícios para testes, garantindo a independência dos testes.
+* **cypress-file-upload:** Plugin para simular o upload de arquivos durante os testes.
+
+## ⚙️ Pré-requisitos
+
+>>>>>>> 657aeba2dd82ee041ddc21002711bdeb3d23ec24
 Antes de começar, certifique-se de que o Node.js e o npm estão instalados no seu ambiente de desenvolvimento.
 
 Verifique a instalação com os comandos:
 
+<<<<<<< HEAD
+=======
+```bash
+>>>>>>> 657aeba2dd82ee041ddc21002711bdeb3d23ec24
 node -v
 npm -v
 Caso não estejam instalados, baixe e instale a versão mais recente do Node.js em nodejs.org.
@@ -84,5 +124,11 @@ Bash
 cypress/videos/
 Para visualizar um vídeo específico, basta abrir o arquivo .mp4 gerado no seu player de vídeo preferido.
 
+<<<<<<< HEAD
 Autora
 Chayanny Gois
+=======
+
+Autora
+Chayanny Gois
+>>>>>>> 657aeba2dd82ee041ddc21002711bdeb3d23ec24
