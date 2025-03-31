@@ -1,7 +1,7 @@
 import { faker } from '@faker-js/faker';
 import 'cypress-file-upload';
 
-describe('Cadastro, login, criação de receita, upload de imagem, visualização de Receita e logout.' , () => {
+describe('Cadastro, login, criação de receita, upload de imagem, visualização de Receita e logout.', () => {
   it('Deve cadastrar o usuário, fazer login e criar uma receita com upload de imagem', () => {
     const nome = faker.name.firstName();
     const email = faker.internet.email();
@@ -23,7 +23,13 @@ describe('Cadastro, login, criação de receita, upload de imagem, visualizaçã
     cy.get('button[type="submit"]').click({ force: true });
 
     // Confirma que estamos no dashboard
-    cy.url().should('include', '/dashboard');
+    cy.url({ timeout: 10000 }).should('include', '/dashboard');
+
+    // Garantir que o token foi salvo no localStorage
+    cy.window().then((win) => {
+      const token = win.localStorage.getItem('authToken');
+      expect(token).to.exist;
+    });
 
     // Navegar até a página de Criar Receita
     cy.get('a[href="/create-recipe"]').click();
@@ -42,32 +48,32 @@ describe('Cadastro, login, criação de receita, upload de imagem, visualizaçã
     cy.get('input[id="carboidratos"]').type('60g');
     cy.get('input[id="gorduras"]').type('15g');
 
-    // Upload da imagem: verifique se o caminho está correto e o arquivo existe na pasta cypress/fixtures/images
-    cy.get('input[id="imagem"]').attachFile('bolo.png');       
+    // Upload da imagem
+    cy.get('input[id="imagem"]').attachFile('images/bolo.png', { force: true });
+
     // Submeter o formulário de criar receita
     cy.get('button[type="submit"]').click({ force: true });
 
     // Verificar se a receita foi criada com sucesso
-    cy.contains('Receita criada com sucesso').should('be.visible'); // Mensagem de sucesso, se aparecer
+    cy.contains('Receita criada com sucesso', { timeout: 5000 }).should('be.visible');
 
+    // Clicar no botão "Voltar" para voltar ao dashboard
+    cy.get('.voltar-btn', { timeout: 5000 }).should('be.visible').click();
 
-    // 6. Clicar no botão "Voltar" para voltar ao dashboard
-    cy.get('.voltar-btn').click();
-
-    // 7. Esperar a página de dashboard carregar e acessar "Minhas Receitas"
-    cy.url().should('include', '/dashboard'); // Verifique que está no dashboard
+    // Verifica se voltou ao dashboard e acessa "Minhas Receitas"
+    cy.url().should('include', '/dashboard');
     cy.get('a[href="/my-recipes"]').click();
 
-    // 8. Visualizar a receita recém criada
-    cy.contains('Bolo de Chocolate').should('be.visible'); // Confirma que a receita criada está visível
+    // Visualizar a receita recém-criada
+    cy.contains('Bolo de Chocolate', { timeout: 5000 }).should('be.visible');
 
-    // 9. Voltar para o dashboard
-    cy.get('.voltar-btn').click(); // Voltar para a página inicial (Dashboard)
+    // Voltar para o dashboard
+    cy.get('.voltar-btn', { timeout: 5000 }).should('be.visible').click();
 
-    // 10. Fazer logout
-    cy.contains('Sair').click(); // Clicar no botão de "Sair" para finalizar a sessão
+    // Fazer logout
+    cy.contains('Sair').click({ force: true });
 
     // Verificar que a página foi redirecionada para login
-    cy.url().should('include', '/login'); // Espera que a URL contenha '/login', indicando que a sessão foi encerrada
+    cy.url({ timeout: 5000 }).should('include', '/login');
   });
 });
