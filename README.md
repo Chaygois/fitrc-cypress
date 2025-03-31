@@ -46,14 +46,12 @@ Caso não estejam instalados, baixe e instale a versão mais recente do Node.js 
 Instalação
 1️⃣ Clone o Repositório
 bash
-Copiar
-Editar
+
 git clone https://github.com/Chaygois/rc-cypress.git
 cd rc-cypress
 2️⃣ Instale as Dependências
 bash
-Copiar
-Editar
+
 npm install
 Este comando instala o Cypress, o faker.js, o cypress-file-upload e outras dependências necessárias.
 
@@ -65,27 +63,23 @@ Configuração do Cypress: O arquivo cypress.config.js contém as configuraçõe
 ▶️ Execução dos Testes
 📌 Abrir a Interface Gráfica do Cypress
 bash
-Copiar
-Editar
+
 npx cypress open
 Este comando abre o Cypress Test Runner, onde você pode selecionar e executar os testes interativamente.
 
 📌 Executar os Testes no Terminal (Modo Headless)
 bash
-Copiar
-Editar
+
 npx cypress run
 Ideal para integração contínua e pipelines de CI/CD, executando os testes diretamente no terminal.
 
 📌 Executar um Teste Específico
 bash
-Copiar
-Editar
+
 npx cypress run --spec "cypress/e2e/nome-do-teste.cy.js"
 📌 Executar Testes de um Diretório
 bash
-Copiar
-Editar
+
 npx cypress run --spec "cypress/e2e/diretorio/*"
 🎥 Visualizando os Vídeos dos Testes
 Durante a execução dos testes no modo headless (npx cypress run), o Cypress grava vídeos automaticamente.
@@ -93,16 +87,11 @@ Durante a execução dos testes no modo headless (npx cypress run), o Cypress gr
 Os vídeos são salvos na pasta:
 
 bash
-Copiar
-Editar
+
+
 cypress/videos/
 Para visualizar um vídeo específico, basta abrir o arquivo .mp4 gerado no seu player de vídeo preferido.
 
-Caso queira desativar a gravação de vídeos, edite o arquivo cypress.config.js e adicione:
 
-javascript
-Copiar
-Editar
-video: false
 ✨ Autora
 Chayanny Gois
