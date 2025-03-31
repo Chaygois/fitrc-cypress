@@ -1,6 +1,6 @@
 # Testes Automatizados Cypress para FITRC
 
-Este repositório contém testes automatizados end-to-end para validar os principais fluxos de usuário na aplicação web RCFITNESS. Os testes foram desenvolvidos utilizando Cypress e abrangem funcionalidades como cadastro de usuários, login, criação, visualização e exclusão de receitas, além de validações de campos obrigatórios.
+Este repositório contém testes automatizados end-to-end para validar os principais fluxos de usuário na aplicação web RCFITNESS. Os testes foram desenvolvidos utilizando Cypress e abrangem funcionalidades como cadastro de usuários, login, criação, visualização e exclusão de receitas.
 
 ##  Funcionalidades Testadas
 
@@ -21,8 +21,7 @@ Este repositório contém testes automatizados end-to-end para validar os princi
 * **Exclusão de Receitas**
     * ✅ Testa a exclusão de receitas existentes.
     * ✅ Verifica se a receita é removida da lista após a exclusão.
-* **Validação de Campos Vazios**
-    * ✅ Garante que a aplicação lida corretamente com campos obrigatórios não preenchidos em todos os formulários.
+
 
 ##  Tecnologias Utilizadas
 
@@ -92,6 +91,7 @@ Bash
 
 cypress/videos/
 Para visualizar um vídeo específico, basta abrir o arquivo .mp4 gerado no seu player de vídeo preferido.
+
 
 Autora
 Chayanny Gois
